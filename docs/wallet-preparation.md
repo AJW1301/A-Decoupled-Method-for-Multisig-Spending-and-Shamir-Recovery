@@ -56,7 +56,7 @@ As a result:
 
 This model acknowledges **vendor risk** as a real and valid risk.
 
-Using a single hardware wallet vendor concentrates implementation (including firmware) and supply-chain risk. This risk is **not eliminated**, but it is deliberately **managed** rather than avoided. In this model, vendor risk is partially mitigated through the use of **strong, user-generated signing passphrases**.
+Using a single hardware wallet vendor concentrates implementation (including firmware) and supply-chain risk. This risk is **not eliminated**, but it is deliberately **managed** rather than avoided. In this model, vendor risk is partially mitigated through the use of **a strong, user-generated passphrases**.
 
 The decision to allow a single-vendor setup represents a **conscious trade-off**. It accepts residual vendor risk in exchange for meaningful benefits:
 
@@ -79,7 +79,7 @@ Users are **not required** to generate their own seed phrases.
 
 Seed generation is left to reputable hardware wallets to perform their intended role: generating a seed phrase inside the device. This model does not attempt to replace or second-guess that process.
 
-At the same time, the model does not rely solely on device-generated entropy. Additional **user-introduced entropy** is deliberately added through the use of strong, user-generated **signing passphrases**. This layered approach reduces reliance on any single entropy source while keeping the setup practical and user-friendly.
+At the same time, the model does not rely solely on device-generated entropy. Additional **user-introduced entropy** is deliberately added through the use of strong, user-generated **passphrases**. This layered approach reduces reliance on any single entropy source while keeping the setup practical and user-friendly.
 
 Requiring users to manually construct seed phrases would significantly increase complexity and error risk, and would move beyond the intended scope of this model.
 
@@ -87,14 +87,13 @@ Requiring users to manually construct seed phrases would significantly increase 
 
 ## 6. Signing Passphrase Strategy
 
-User-generated entropy is applied to **signing passphrases**, in addition to device-generated seeds.
+User-generated entropy is applied to **passphrases**, in addition to device-generated seeds.
 
 Principles:
 
 - Passphrases are generated using **physical randomness** (dice) mapped to a **Diceware-style word list**
 - Passphrase length is flexible and should be chosen based on the user’s threat model (commonly **4 to 12 words**, subject to device support)
-- Passphrases are used for **signing** (a seed phrase alone is insufficient to authorize spending without the passphrase)
-
+  
 Purpose:
 
 - Add user-controlled entropy on top of device-generated seeds
