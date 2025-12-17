@@ -223,7 +223,7 @@ This document describes a method to **decouple the signing policy** (multisig *m
 
 By allowing a larger *k* for backups, each individual share becomes less critical to overall survivability, which can reduce the storage burden placed on any single share.
 
-The method also supports a **2-of-2** multisig configuration, allowing a single user to keep custody fully personal while still requiring multiple devices to spend.
+The method also supports a **2-of-2** multisig configuration, allowing a single user to keep custody fully personal.
 
 ## Further reading
 
